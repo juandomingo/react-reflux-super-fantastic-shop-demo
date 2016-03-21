@@ -1,4 +1,5 @@
 .appBasket {
+  min-width: 350px;
   float: right;
   border: 1px solid #F1F1F1;
   border-right: 1px solid #DDD;
@@ -14,6 +15,7 @@
   height: 0;
 }
 .appBasket-nrItems, .appBasket-total {
+
   opacity: 1;
   -webkit-transition: opacity 0.25s ease-in;
   transition: opacity 0.25s ease-in;

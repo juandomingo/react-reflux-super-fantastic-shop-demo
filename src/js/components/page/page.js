@@ -3,7 +3,6 @@
 let React = require('react');
 let Reflux = require('reflux');
 
-
 let Items = require('../products/items');
 
 require('./page.css');

@@ -1,10 +1,10 @@
-    .bloque-top{ top:0px; height:55px; width:100%; };
-    .bloque-bottom{ bottom:0px; height:100px; width:100%; };
+    .bloque-top{ top:0px; height:55px; width:100%; position:relative;float: right; };
+    .bloque-bottom{ bottom:0px; height:130px; width:100%; };
     .responsive-header{background-color: #fff};
 
 
 
-.fixed-bottom{display: none;};
+
 
 .logintext{
   text-align: center;
@@ -14,18 +14,25 @@
 
 
 .fixed-bottom{
-  z-index: 9;
+  width: 1100px;
+  z-index: 11;
+  height:100px;
   position:fixed;
+  display: block;
+  margin: 0 auto;
   bottom:0px;
-  width:100%;
   border: 1px solid #F1F1F1;
   border-right: 1px solid #DDD;
   border-bottom: 1px solid #DDD;
   box-shadow: 1px 1px 2px #DDD;
-  padding: 0 10px;
+  padding: 0 auto;
   background-color: #FFF;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 0 0 5px 5px;
+        @media screen and (min-width: $bp-medium) {
+    max-width: $page-max-width;
+  }
+  @extend %clearfix;
 };
 
 .fixed-top-left{
@@ -38,7 +45,6 @@
 };
 
 .float-right {
-
     right:0px;
     float:right;
     display: block;

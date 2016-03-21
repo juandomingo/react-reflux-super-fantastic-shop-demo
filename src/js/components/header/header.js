@@ -50,6 +50,7 @@ var Header =
 		<MediaQuery maxDeviceWidth={800}>
 
 					<div className="container bloque-top"></div>
+
 					<div className="appBasket fixed-container pure-menu pure-menu-horizontal">
 						<ul className="pure-menu-list">
 							<li className="pure-menu-item pure-menu-selected"><NavResponsive /></li>
@@ -59,7 +60,12 @@ var Header =
 									<LoginResponsive className=" inline pure-u-1-2"/>
 								</div>
 							</li>
-							<li className="pure-menu-item"><Basket/></li>
+							<li className="pure-menu-item pure-menu-selected">
+								<div>
+							<Basket/>
+							</div>
+							</li>
+							
 						</ul>
 					</div>
 

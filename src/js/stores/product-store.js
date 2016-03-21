@@ -17,16 +17,30 @@ let ProductStore = Reflux.createStore({
     this.listenTo(actions.loadPage, this.loadPage);
   },
 
+
   loadPage(productType,cached) {
-      console.log(productType);
-      request.get('//shopsho.es:80/get' + productType)
+    /*
+    if(cached !== true || this.data.products[productType].length === 0) {
+      request.get('data/' + productType +'.json')
+
+        .end((err, res) => {
+          this.data.products[productType] = JSON.parse(res.text)[0].products;
+          this.trigger(this.data);
+        });
+     } else {
+      this.trigger(this.data);
+    }
+},
+
+*/      console.log(productType);
+
+      request.get('/get' + productType)
         .end((err, res) => {
           this.data.products[productType] = JSON.parse(res.text)[0].products;
           this.trigger(this.data);
         });
 
-  },
-
+},
   getInitialState() {
     return this.data;
   }
