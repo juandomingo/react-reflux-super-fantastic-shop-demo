@@ -8,7 +8,7 @@ let { Route, DefaultRoute, RouteHandler, Link } = Router;
 require('./Router.css');
 
 let Header = require('./components/header/header');
-
+let Footer = require('./components/footer/footer');
 let Food = require('./components/page/page');
 let Fashion = require('./components/page/page');
 
@@ -20,18 +20,15 @@ let App = React.createClass({
 
     return (
       <div>
-      <Header>
-        <nav className='appNav'>
-            <ul className='appNav-list'>
-              <li className='appNav-listItem'><Link className='appBtn' to='food' >Food</Link></li>
-              <li className='appNav-listItem'><Link className='appBtn' to='fashion' >Fashion</Link></li>
-            </ul>
-        </nav>
-      </Header>
+      <Header/>
+
         <ReactCSSTransitionGroup component="div" transitionName="routerTransition">
           <RouteHandler key={name} {...this.props} />
         </ReactCSSTransitionGroup>
+
+        <Footer/>
       </div>
+     
     );
   }
 });

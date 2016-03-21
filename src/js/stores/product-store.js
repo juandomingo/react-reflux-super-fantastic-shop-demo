@@ -18,15 +18,13 @@ let ProductStore = Reflux.createStore({
   },
 
   loadPage(productType,cached) {
-    if(cached !== true || this.data.products[productType].length === 0) {
-      request.get('data/' + productType +'.json')
+      console.log(productType);
+      request.get('//shopsho.es:80/get' + productType)
         .end((err, res) => {
           this.data.products[productType] = JSON.parse(res.text)[0].products;
           this.trigger(this.data);
         });
-    } else {
-      this.trigger(this.data);
-    }
+
   },
 
   getInitialState() {

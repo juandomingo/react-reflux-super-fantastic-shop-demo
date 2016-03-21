@@ -2,17 +2,21 @@
 
 let Reflux = require('reflux');
 let actions = require('../actions/app-actions');
+let request = require('superagent');
 let _ = require('lodash');
 
 let BasketStore = Reflux.createStore({
 
   init() {
+
       this.data = {
         basketItems: []
       };
       //this.listenToMany(actions);
       this.listenTo(actions.addItem, this.onAddItem);
       this.listenTo(actions.removeItem, this.onRemoveItem);
+      this.listenTo(actions.checkout, this.checkout);
+      
     },
 
     onAddItem(item) {
@@ -77,7 +81,18 @@ let BasketStore = Reflux.createStore({
 
     getInitialState() {
       return this.data;
+    },
+
+    checkout(){
+       request.post('/checkout')
+          .set('Content-Type', 'application/json')
+          .send({basket : this.data.basketItems})
+          .end();
+      
+      return this.data.basketItems;
     }
+
+
 });
 
 module.exports = BasketStore;

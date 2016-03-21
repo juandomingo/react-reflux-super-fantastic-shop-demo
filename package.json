@@ -1,5 +1,5 @@
 {
-  "name": "shoes-shop",
+  "name": "react-reflux-super-fantastic-shop-demo",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -32,6 +32,7 @@
     "traceurify": "0.0.6",
     "vinyl-source-stream": "^1.0.0",
     "watchify": "^2.4.0",
-    "yargs": "^3.5.4"
+    "yargs": "^3.5.4",
+    "react-responsive" : "latest"
   }
 }

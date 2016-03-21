@@ -1,8 +1,9 @@
 {
-  "name": "react-reflux-super-fantastic-shop-demo",
-  "version": "0.0.0",
+  "name": "shopsho.es",
+  "version": "1.1.0",
   "authors": [
-    "Marinda - hello@marinda.me"
+    "Marinda - hello@marinda.me",
+    "Tino - juanagustintibaldo@gmail.com"
   ],
   "license": "MIT",
   "ignore": [

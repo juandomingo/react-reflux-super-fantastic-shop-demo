@@ -1,0 +1,14 @@
+LISTO 1- Home page (Loguin ubicación, footer, y tamaño de post item). Debe aparecer el nombre del usuario en el login. 
+ARREGLAR COSAS QUE QUEDAN FEAS 2. Responsive loguin y menu:
+listo 3. Render Nuevos items: Los items nuevos deben renderizarse en la home.
+listo 4. Baja y Modificación de items.
+       En add page, por medio de un boton EDITAR       
+       aparecen los items y con dos botones (Modificar) 
+      (Eliminar).
+
+       Cuando es modificar, el component pasa al mismo 
+       estado que cuando estoy dando de alta un nuevo      
+       item, donde puedo cambiar la imagen y los demas 
+       datos.
+Listo 5. En alta de items: subir 
+    imágenes en page add.

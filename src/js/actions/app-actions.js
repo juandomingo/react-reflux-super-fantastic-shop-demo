@@ -9,7 +9,8 @@ let AppActions = Reflux.createActions(
   'loadPage',
   'addItem',
   'removeItem',
-  'pageChange'
+  'pageChange',
+  'checkout'
   ]
 );
 

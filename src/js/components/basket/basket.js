@@ -9,6 +9,7 @@ let actions = require('../../actions/app-actions');
 
 let AddToBasket = require('../basket/add-to-basket.js');
 let RemoveFromBasket = require('../basket/remove-from-basket.js');
+let BasketCheckOut = require('../basket/basket-checkout.js');
 
 require('./basket.css');
 
@@ -53,12 +54,13 @@ let Basket = React.createClass({
         </li>);
     });
     return (
-      <div className={"appBasket pure-u-3-5 pure-u-md-3-5 pure-u-lg-2-5 " + statusClassName}>
+      <div className={"appBasket pure-u-1 pure-u-md-3-5 pure-u-lg-2-5 " + statusClassName}>
         <div className="pure-g">
           <div className="appBasket-label pure-u-1-2">Basket</div>
           <div className="pure-u-1-2">
             <span className="appBasket-nrItems"> x {this.state.qty}</span>
             <span className="appBasket-total">£{this.state.total}.00</span>
+            <BasketCheckOut text="checkout appBasket-nrItems"/>
           </div>
         </div>
         <ul className="basketList list-reset">{list}</ul>
