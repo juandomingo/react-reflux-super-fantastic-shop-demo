@@ -38,9 +38,9 @@ var Header =
 					<Nav />
 				</div>
 
-				<div className="float-right pure-u-1-3">
+				<div className="float-right loginbutton pure-u-1-3">
 					<p >Login or Register with: </p>
-					<Login/>
+					<Login />
 				</div>
 			</div>
 
@@ -48,28 +48,52 @@ var Header =
 
 
 		<MediaQuery maxDeviceWidth={800}>
+						<MediaQuery minDeviceWidth={449}>
 
 					<div className="container bloque-top"></div>
 
-					<div className="appBasket fixed-container pure-menu pure-menu-horizontal">
-						<ul className="pure-menu-list">
-							<li className="pure-menu-item pure-menu-selected"><NavResponsive /></li>
-							<li className="pure-menu-item pure-menu-selected">
-								<div className="container">
+					<div className="nopadding appBasket fixed-container pure-menu pure-menu-horizontal">
+						<ul className="pure-g">
+							<li className="pure-u-1-12 pure-menu-selected"><NavResponsive /></li>
+							<li className="pure-u-1-4 pure-menu-selected">
+								<div className="loginbutton">
 									<p className="logintext" >Login </p>
 									<LoginResponsive className=" inline pure-u-1-2"/>
 								</div>
 							</li>
-							<li className="pure-menu-item pure-menu-selected">
+
+							<li className="pure-u-2-3 block pure-sm-2-3">
 								<div>
-							<Basket/>
-							</div>
+								<Basket/>
+								</div>
 							</li>
-							
+
 						</ul>
 					</div>
+				</MediaQuery>
+							<MediaQuery maxDeviceWidth={439}>
 
-			 
+					<div className="container bloque-top"></div>
+
+					<div className="nopadding appBasket fixed-container pure-menu pure-menu-horizontal">
+						<ul className="pure-g nopadding">
+							<li className="pure-u-1-12 pure-menu-selected"><NavResponsive /></li>
+							<li className="pure-u-1-4 pure-menu-selected">
+								<div className="loginbutton">
+									<p className="logintext" >Login </p>
+									<LoginResponsive className=" inline pure-u-1-2"/>
+								</div>
+							</li>
+
+						</ul>
+						<Basket/>
+					</div>
+				</MediaQuery>
+
+
+
+		
+
 
 					<div className="appHeader">
 							<h1>Super fantastic shop</h1>

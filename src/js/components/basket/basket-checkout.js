@@ -16,9 +16,9 @@ let BasketCheckOut = React.createClass({
     };
 
     return (
-      <button onClick={clickHandler} className="addBasket appBasket-nrItems pure-button">
-        {this.props.text}
-      </button>
+      <a onClick={clickHandler} className="addBasket pure-button">
+         <i className="fa fa-shopping-cart"></i>Checkout
+      </a>
     );
   }
 });

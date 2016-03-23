@@ -19,7 +19,7 @@ let ProductStore = Reflux.createStore({
 
 
   loadPage(productType,cached) {
-    /*
+   /* 
     if(cached !== true || this.data.products[productType].length === 0) {
       request.get('data/' + productType +'.json')
 
@@ -30,9 +30,9 @@ let ProductStore = Reflux.createStore({
      } else {
       this.trigger(this.data);
     }
-},
+ */
 
-*/      console.log(productType);
+     console.log(productType);
 
       request.get('/get' + productType)
         .end((err, res) => {

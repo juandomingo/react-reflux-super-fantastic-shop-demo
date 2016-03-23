@@ -13,7 +13,7 @@ var NavResponsive = React.createClass({
           <div className="pure-menu pure-menu-horizontal ">
           <ul className=' appNav-list pure-menu-list  '>
             <li className="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-              <div href="" id="shops" className="pure-menu-link">
+              <div href="" id="shops" className="dropdownnav">
                 <i className="fa fa-bars"></i>
               </div>
             <ul className="pure-menu-children">

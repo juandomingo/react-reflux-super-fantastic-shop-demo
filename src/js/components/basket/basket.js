@@ -47,24 +47,31 @@ let Basket = React.createClass({
             <span className="appBasket-qty">x {item.qty}</span>
             </div>
 
-          <div className="pure-u-1-2 appBasket-controls">
+          <div className="pure-u-1-2 appBasket-controls appBasket-controls-adj">
             <AddToBasket text="+" item={item} />
             <RemoveFromBasket item={item} />
           </div>
         </li>);
     });
     return (
-      <div className={"appBasket pure-u-3-5 pure-u-md-3-5 pure-u-lg-3-5 " + statusClassName}>
+      <div className={"appBasket pure-u-1-1 pure-u-md-3-5 pure-u-lg-3-5 " + statusClassName}>
         <div className="pure-g">
           <div className="appBasket-label pure-u-1-3">Basket</div>
           <div className="pure-u-2-3">
             <span className="appBasket-nrItems"> x {this.state.qty}</span>
             <span className="appBasket-total">£{this.state.total}.00</span>
+
           </div>
-          
+               
         </div>
-        <BasketCheckOut className="pure-u-1-1" text="checkout"/>
-        <ul className="basketList list-reset">{list}</ul>
+        <div>
+        <span className="appBasket-total"> <BasketCheckOut/></span> 
+        </div>
+                <div>
+
+        <ul className="basketList list-reset pure-u-1">{list}</ul>
+        </div>
+
       </div>
     );
   }

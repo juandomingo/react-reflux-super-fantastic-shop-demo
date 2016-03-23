@@ -9,7 +9,7 @@ var Footer =
         
         <div className="container">
         <MediaQuery minDeviceWidth={800}>
-            <div className="bloque-bottom"></div>
+            <div className="bloque-bottom "></div>
             <div className="fixed-bottom">
               <h1>FOOTER </h1>
             </div>
